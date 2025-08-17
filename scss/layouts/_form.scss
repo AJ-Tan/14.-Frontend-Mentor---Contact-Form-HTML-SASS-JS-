@@ -1,6 +1,6 @@
 label:has(~ [required])::after,
 legend:has(+ [class*="group"] [required])::after,
-label:has(input[type="checkbox"]) span::after {
+label:has(input[type="checkbox"][required]) span::after {
    content: "*";
    color: var(--color-accent-1);
    margin-inline: var(--spacing-sm-1);
