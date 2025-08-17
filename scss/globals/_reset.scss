@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   display: grid;
+}
+
+input,
+button,
+textarea {
+   font: inherit;
+   cursor: pointer;
+}
+
+textarea {
+   resize: none;
+}
+
+input,
+textarea {
+   outline: none;
+}
+
+input,
+button,
+textarea,
+label:has(input) {
+   cursor: pointer;
+}
+
+button {
+   border: none;
+}

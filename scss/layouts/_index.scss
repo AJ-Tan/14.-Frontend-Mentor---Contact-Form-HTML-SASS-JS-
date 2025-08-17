@@ -1,0 +1,13 @@
+@forward "main";
+@forward "footer";
+@forward "form";
+@forward "contact";
+@forward "alert";
+@forward "media";
+
+body {
+   align-content: center;
+   min-height: 100vh;
+
+   background-color: var(--color-bg);
+}

@@ -1,0 +1,71 @@
+@use "../utils/mixins" as *;
+
+.contact {
+   display: grid;
+   gap: var(--spacing-md-2);
+   max-width: 45.0625rem;
+
+   border-radius: 1rem;
+   margin: var(--spacing-lg-1) auto;
+   padding: var(--spacing-md-2);
+
+   background-color: var(--color-neutral-1);
+
+   &__first-name {
+      grid-area: firstName;
+   }
+
+   &__last-name {
+      grid-area: lastName;
+   }
+
+   &__email {
+      grid-area: email;
+   }
+
+   &__query {
+      grid-area: query;
+   }
+
+   &__message {
+      grid-area: message;
+   }
+
+   &__consent {
+      grid-area: consent;
+   }
+
+   &__submit {
+      grid-area: submit;
+   }
+
+   &__form {
+      grid-template-areas:
+         "firstName"
+         "lastName"
+         "email"
+         "query"
+         "message"
+         "consent"
+         "submit";
+   }
+
+   @include breakpoint("tablet") {
+      padding: var(--spacing-lg-1);
+      margin-block: var(--spacing-xl-2);
+
+      &__form {
+         grid-template-areas:
+            "firstName lastName"
+            "email email"
+            "query query"
+            "message message"
+            "consent consent"
+            "submit submit";
+      }
+
+      &__query .form__group-radios {
+         flex-direction: row;
+      }
+   }
+}

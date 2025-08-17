@@ -1,0 +1,23 @@
+@forward "font-face";
+
+body {
+   font-family: "Karla", Arial, Helvetica, sans-serif;
+}
+
+h1,
+label,
+legend {
+   color: var(--color-neutral-3);
+}
+
+h1 {
+   font-size: 2rem;
+}
+
+span[id^="error"] {
+   color: var(--color-error-text);
+}
+
+button[type="submit"] {
+   color: var(--color-neutral-1);
+}

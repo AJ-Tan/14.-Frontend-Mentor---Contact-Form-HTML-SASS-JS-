@@ -1,0 +1,24 @@
+:root {
+   /* Colors */
+   --color-bg: hsl(148, 38%, 91%);
+   --color-accent-1: hsl(169, 82%, 27%);
+   --color-accent-2: hsl(171, 76%, 13%);
+   --color-accent-3: hsl(185, 24%, 22%);
+   --color-error-border: hsl(0, 81%, 39%);
+   --color-error-text: hsl(0, 66%, 54%);
+
+   --color-neutral-1: hsl(0, 0%, 100%);
+   --color-neutral-2: hsl(186, 15%, 59%);
+   --color-neutral-3: hsl(187, 24%, 22%);
+   --color-neutral-4: hsla(0, 0%, 100%, 0.9);
+
+   /* Spacing */
+   --spacing-sm-1: 0.5rem;
+   --spacing-sm-2: 0.75rem;
+   --spacing-md-1: 1rem;
+   --spacing-md-2: 1.5rem;
+   --spacing-lg-1: 2rem;
+   --spacing-lg-2: 2.5rem;
+   --spacing-xl-1: 3rem;
+   --spacing-xl-2: 4rem;
+}

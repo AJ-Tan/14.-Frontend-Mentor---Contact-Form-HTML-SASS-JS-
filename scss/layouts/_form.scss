@@ -1,0 +1,129 @@
+label:has(~ [required])::after,
+legend:has(+ [class*="group"] [required])::after,
+label:has(input[type="checkbox"]) span::after {
+   content: "*";
+   color: var(--color-accent-1);
+   margin-inline: var(--spacing-sm-1);
+}
+
+.form {
+   display: grid;
+   row-gap: var(--spacing-md-2);
+   column-gap: var(--spacing-md-1);
+
+   &__error {
+      display: none;
+   }
+
+   &__fieldset {
+      border: none;
+      gap: var(--spacing-sm-2);
+
+      &-legend {
+         margin-block-end: var(--spacing-md-1);
+      }
+   }
+
+   &__fieldset,
+   &__group {
+      display: grid;
+   }
+
+   &__group {
+      gap: var(--spacing-sm-2);
+      align-content: start;
+   }
+
+   &__group-radios {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md-1);
+   }
+
+   &__input-textarea {
+      block-size: 15rem;
+   }
+
+   &__input-submit {
+      background-color: var(--color-accent-1);
+
+      &:hover {
+         background-color: var(--color-accent-2);
+      }
+   }
+
+   &__label:has(input[type="radio"]),
+   &__label:has(input[type="checkbox"]) {
+      flex: 1;
+
+      display: flex;
+      gap: var(--spacing-sm-2);
+      align-items: center;
+   }
+
+   &__label:has(input[type="radio"]:checked) {
+      background-color: var(--color-bg);
+   }
+
+   &__label:has(input[type="radio"]),
+   &__input-text,
+   &__input-textarea,
+   &__input-submit {
+      border: 1px solid var(--color-neutral-2);
+      border-radius: 0.3rem;
+      padding: var(--spacing-sm-2) var(--spacing-md-1);
+   }
+
+   /*** Basically just displays error msg when aria invalid is true ***/
+   :is(input, textarea)[aria-invalid="true"] + &__error,
+   &__group-radios:has(label input[aria-invalid="true"]) + &__error,
+   label:has(input[aria-invalid="true"]) + &__error {
+      display: block;
+   }
+
+   :is(input[type="text"], input[type="email"], textarea)[aria-invalid="true"] {
+      border-color: var(--color-error-border);
+   }
+}
+
+/*** Focus/Hover ***/
+
+:is(input[type="text"], input[type="email"], textarea):is(:focus, :hover) {
+   border-color: var(--color-accent-1);
+}
+
+/*** Custom Radio/Checkbox ***/
+
+[type="checkbox"] {
+   appearance: none;
+   flex-shrink: 0;
+
+   border: 2px solid var(--color-neutral-2);
+   border-radius: 0.2rem;
+   margin-inline-end: 0.6rem;
+
+   block-size: 1.125rem;
+   inline-size: 1.125rem;
+}
+
+[type="radio"] {
+   appearance: none;
+   border: 1px solid var(--color-neutral-2);
+   border-radius: 100%;
+   block-size: 1.3125rem;
+   inline-size: 1.25rem;
+}
+
+[type="checkbox"]:checked,
+[type="radio"]:checked {
+   background-size: cover;
+   border: none;
+}
+
+[type="checkbox"]:checked {
+   background-image: url("../assets/images/icon-checkbox-check.svg");
+}
+
+[type="radio"]:checked {
+   background-image: url("../assets/images/icon-radio-selected.svg");
+}
