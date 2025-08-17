@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 -  Solution URL: [GitHub Repository](https://github.com/AJ-Tan/14.-Frontend-Mentor---Contact-Form-HTML-SASS-JS-)
--  Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-  Live Site URL: [GitHub Pages](https://aj-tan.github.io/14.-Frontend-Mentor---Contact-Form-HTML-SASS-JS-/)
 
 ## My process
 
